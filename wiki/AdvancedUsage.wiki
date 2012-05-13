@@ -1,0 +1,15 @@
+#Advanced Usage Guide 
+
+= Introduction =
+
+This is Kids Place API Advanced Usage Guide. You need to set up your project as describe in [http://code.google.com/p/kidsplace-api-samples/#basic_setup basic setup] before using all the features described here.
+
+If you have any question or comment regarding ACRA, post a message on the [http://groups.google.com/group/kids-place-sdk-group Discussion Group].
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
