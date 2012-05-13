@@ -10,7 +10,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.preference.PreferenceManager;
 
 public class Utility {
@@ -27,10 +26,7 @@ public class Utility {
 	//market switch logic
 	protected static int APP_MARKET = ANDROID_MARKET;//comment this for Amazon market	
 	//private static int APP_MARKET = AMAZON_MARKET;//comment this for Android market
-	
-	private static final String KEY_FIRST_TIME_SETTING = "firstTimeValue";//flag to indicate if user is using app for first time
-	private static final String KEY_INSTALL_DATE_SETTING = "installDateValue";//date (in milli seconds) when app was installed on device
-    
+	    
     protected static final String KEY_CHILD_LOCK_SETTING = "childLockEnabled";//This flag controls if Kids Place will be started on launch or not
 	private static final String TAG = "Utility";
 	private static boolean LOGGING_ERR = true;

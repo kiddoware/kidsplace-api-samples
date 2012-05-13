@@ -1,6 +1,5 @@
 package com.kiddoware.kidsplace_sdk.samples.advanced;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.res.Configuration;
@@ -11,16 +10,13 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 
 import android.view.WindowManager;
-import android.widget.Toast;
 
 public class PrefsActivity extends PreferenceActivity implements
 		OnSharedPreferenceChangeListener {
 	public static final String KEY_MY_PREFERENCE = "my_preference";
-	private static final String TAG = "KidsPlacePrefsActivity";
 	private static final CharSequence EXIT_APP = "exitApp";//key for Exit App pref setting
 	private static final int RESULT_EXIT_APP = 999;
 
-	// TODO: if we don't know a device's system settings activity grey out the setting or remove
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

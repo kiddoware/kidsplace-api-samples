@@ -22,7 +22,7 @@
     <string name="pin_message">Please enter your Kids Place app 4 digit pin:</string>     
     <string name="pin_hint_label2">Hint:</string>
     <string name="pin_request">Enter Kids Place pin</string>
-    <string name="incorrect_pin">Incorrect pin, please try again.\n Note: This app uses Kids Place pin</string>
+    <string name="incorrect_pin">Incorrect pin, please try again.\nNote: This app uses Kids Place pin</string>
     <string name="forgotPin">Forgot Pin? Go here to retrieve:\n http://www.kiddoware.com/forgotpin.php</string>
     
 </resources>
