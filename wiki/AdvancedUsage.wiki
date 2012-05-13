@@ -7,9 +7,7 @@ This is Kids Place API Advanced Usage Guide. You need to set up your project as 
 If you have any question or comment regarding ACRA, post a message on the [http://groups.google.com/group/kids-place-sdk-group Discussion Group].
 
 
-= Details =
+= User Interaction =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+ *Provide a setting in your app to enable child lock. This will give user an option to choose if they would like to childproof your Android app. 
+ *Before starting Kids Place app, display a simple dialog asking them if they would like to start Kids Place. This will make sure that even if they have enabled the child lock settings, they can still choose to not run Kids Place if they 
