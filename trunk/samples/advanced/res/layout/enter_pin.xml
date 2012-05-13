@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/toast_layout_root" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:orientation="vertical">
+	<EditText android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/pin"
+		android:password="true" android:numeric="integer" android:maxLength="4" />
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal">
+		<TextView android:text="@string/pin_hint_label2" android:id="@+id/textView1" 
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginRight="2.0sp">
+		</TextView>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/pin_hintTextView"
+			android:text="" />
+	</LinearLayout>
+
+	<TextView
+	    android:id="@+id/textViewForgotPin"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="3dp"
+	    android:text="@string/forgotPin"
+	    android:textSize="12.0sp" />
+
+</LinearLayout>

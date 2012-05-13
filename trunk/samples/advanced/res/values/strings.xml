@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Kids Place SDK Sample - Advanced Usage</string>
+    <string name="app_name">Kidsplace SDK Advanced</string>
+    <string name="loading_settings">Loading Settings...</string>
+    
+    <!-- Settings related message -->
+    <string name="firstCategoryTitle">Settings</string>
+    <string name="exitAppTitle">Exit App</string>
+    <string name="childLockTitle">Enable Child Lock</string>
+    <string name="childLockSummary">Requires Kids Place app. Locks home button and provides other locking features based on Kids Place settings.</string>
+    <string name="settings">Settings</string>
+    
+    <!--  String to display in dialog to start Kids Place app -->
+         <string name="startKPMsg">Kids Place is not running. Please tap Yes to start Kids Place to enable Child Lock.</string>
+      <string name="startKPTitle">Start Kids Place?</string>
+      <string name="yesBtn">Yes</string>
+      <string name="cancelBtn">Cancel</string>   
+      
+     <!--  Strings to display in password dialog --> 
+    <string name="pin_message">Please enter your Kids Place app 4 digit pin:</string>     
+    <string name="pin_hint_label2">Hint:</string>
+    <string name="pin_request">Enter Kids Place pin</string>
+    <string name="incorrect_pin">Incorrect pin, please try again.\n Note: This app uses Kids Place pin</string>
+    <string name="forgotPin">Forgot Pin? Go here to retrieve:\n http://www.kiddoware.com/forgotpin.php</string>
+    
+</resources>
