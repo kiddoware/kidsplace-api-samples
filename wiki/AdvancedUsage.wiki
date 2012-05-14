@@ -12,3 +12,123 @@ For sample source code for advanced integration please refer [http://code.google
 
  * Provide a setting in your app to enable child lock. This will give user an option to choose if they would like to childproof your Android app. 
  * Before starting Kids Place app, display a simple dialog asking them if they would like to start Kids Place. This will make sure that even if they have enabled the child lock settings, they can still choose to not run Kids Place if they 
+
+= Limiting access to kids from certain areas of app =
+ * You can prevent certain part of your app like settings; in-app purchases etc by password protecting it so that only parents can access it. Kids Place API makes it easy for app developers and parents by authenticating against PIN already set up by parents for kids. This prevents app developers for implementing an authentication infrastructure and for parents to remember multiple PIN. 
+
+  # Create new layout for PIN prompt
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/toast_layout_root" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:orientation="vertical">
+	<EditText android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/pin"
+		android:password="true" android:numeric="integer" android:maxLength="4" />
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal">
+		<TextView android:text="@string/pin_hint_label2" android:id="@+id/textView1" 
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginRight="2.0sp">
+		</TextView>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/pin_hintTextView"
+			android:text="" />
+	</LinearLayout>
+
+
+	<TextView
+	    android:id="@+id/textViewForgotPin"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="3dp"
+	    android:text="@string/forgotPin"
+	    android:textSize="12.0sp" />
+
+</LinearLayout>
+}}}
+  # Add following method to the activity from where you want to prompt user to enter for PIN
+{{{
+	private void showPasswordFields() {
+		passwordDialog = null;
+		final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+		Context mContext = getApplicationContext();
+
+		LayoutInflater inflater = (LayoutInflater) mContext
+				.getSystemService(LAYOUT_INFLATER_SERVICE);
+		View layout = inflater.inflate(R.layout.enter_pin, null);
+		alert.setTitle(R.string.pin_request);
+		alert.setMessage(R.string.pin_message);
+		// Set an EditText view to get user input
+		final EditText input = (EditText) layout.findViewById(R.id.pin);
+		input.setInputType(InputType.TYPE_CLASS_PHONE);
+		input.setTransformationMethod(PasswordTransformationMethod
+				.getInstance());
+		alert.setView(layout);
+		final TextView pinHintText = (TextView) layout
+				.findViewById(R.id.pin_hintTextView);
+		pinHintText.setText(KPUtility.getPinHint(getApplicationContext()));
+		alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
+			public void onClick(DialogInterface dialog, int whichButton) {
+				String value = input.getText().toString();
+				if (KPUtility.validatePin(getApplicationContext(), value)) {
+                                //Valid PIN so take user to desired activity/action
+					Toast.makeText(getApplicationContext(),
+							"Authorization Successful",
+							Toast.LENGTH_SHORT).show();					
+
+                               //IMPLEMENT SUCCESS USE CASE  HERE
+						
+
+				} else {
+					// hide the password layout
+					Toast.makeText(getApplicationContext(),
+							R.string.incorrect_pin, Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+
+		alert.setNegativeButton("Cancel",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int whichButton) {
+						// Canceled.
+					}
+				});
+
+		passwordDialog = alert.create();
+		passwordDialog.getWindow().setGravity(Gravity.TOP);
+		input.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+			@Override
+			public void onFocusChange(View v, boolean hasFocus) {
+				if (hasFocus) {
+					if(passwordDialog != null){
+					passwordDialog
+							.getWindow()
+							.setSoftInputMode(
+									WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+					}
+				}
+			}
+		});
+		passwordDialog.show();
+		// auto close password dialog after 20 seconds
+		final Timer t = new Timer();
+
+		t.schedule(new TimerTask() {
+
+			public void run() {
+				try {
+					passwordDialog.dismiss();
+				} catch (Exception ex) {
+
+				}
+				t.cancel(); // also just stop the timer thread, otherwise, you
+							// may receive a crash report
+
+			}
+
+		}, 20000); //
+	}	
+}}}
