@@ -1,3 +1,4 @@
+#labels Featured
 #Advanced Usage Guide 
 
 = Introduction =
