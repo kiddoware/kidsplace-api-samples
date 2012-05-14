@@ -6,6 +6,7 @@ This is Kids Place API Advanced Usage Guide. You need to set up your project as 
 
 If you have any question or comment regarding ACRA, post a message on the [http://groups.google.com/group/kids-place-sdk-group Discussion Group].
 
+For sample source code for advanced integration please refer [http://code.google.com/p/kidsplace-api-samples/source/browse/#svn%2Ftrunk%2Fsamples%2Fadvanced advanced] project code.
 
 = User Interaction =
 
