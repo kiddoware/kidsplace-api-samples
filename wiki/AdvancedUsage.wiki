@@ -92,7 +92,7 @@ For sample source code for advanced integration please refer [http://code.google
 
 </LinearLayout>
 }}}
-  # Add following method to the activity from where you want to prompt user to enter for PIN
+  # Add following method to the activity from where you want to prompt user to enter for PIN.
 {{{
 	private void showPasswordFields() {
 		passwordDialog = null;
