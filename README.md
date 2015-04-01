@@ -7,10 +7,10 @@ Kids Place API Usage Example
 
 This project includes sample code to demonstrate how to use Kids Place API. This can assist android developers who develop Apps for Children with following features:
 
-Locking of home button
-Android Parental Controls Settings
-Central authentication mechanism (to make sure only parents can access the area of app like app settings; in-app purchases and upgrades).
-Add/Remove approved apps from Kids Place.
+   1. Locking of home button
+   2. Android Parental Controls Settings
+   3. Central authentication mechanism (to make sure only parents can access the area of app like app settings; in-app purchases and upgrades).
+   4. Add/Remove approved apps from Kids Place.
 Kids Place - Parental Control app (https://play.google.com/store/apps/details?id=com.kiddoware.kidsplace), by kiddoware (http://www.kiddoware.com/), is a free Android app that provides parental controls with child lock to childproof android devices. Kiddoware provides a simple to use integration code that android developers can use in their project.
 
 Kids Place SDK Can be downloaded from here:  http://www.kiddoware.com/apk/kidsplace_sdk.jar
