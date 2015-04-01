@@ -1,5 +1,4 @@
 # kidsplace-api-samples
-Introduction
 Kids Place SDK allows your Android application to integrate with Kids Place app to provide unified way of Android Parental controls; Locking of Home Button and Security features for kids apps on users device.
 
 Implementing Kids Place SDK will allow developers to focus on implementing the core functionality of app and let Kids Place do the grunt work of making the app Kids friendly and childproofing the app.
