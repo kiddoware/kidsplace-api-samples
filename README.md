@@ -40,10 +40,11 @@ Step by step installation of the Kids Place library in an existing application p
 4. Add the kidsplace_sdk_1.0.jar from your download directory in the libs folder
 5. Add following code in your activity from where you want to invoke Kids Place API
   1. Import Kids Place library
+  ```
      import com.kiddoware.kidsplace.sdk.KPUtility;
-
+```
   2. Add following code in onCreate Method of your activity
-  
+  ```
    KPUtility.handleKPIntegration(this, KPUtility.GOOGLE_MARKET);
    For sample source code for simple integration please refer simple project code.
    For advanced integration please see Advanced Usage Guide: 
