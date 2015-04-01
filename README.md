@@ -47,6 +47,7 @@ Step by step installation of the Kids Place library in an existing application p
   ```
    KPUtility.handleKPIntegration(this, KPUtility.GOOGLE_MARKET);
    ```
+   
 For sample source code for simple integration please refer simple project code:  https://github.com/kiddoware/kidsplace-api-samples/tree/master/samples/simple
 
 For advanced integration please see Advanced Usage Guide: https://github.com/kiddoware/kidsplace-api-samples/wiki/Advanced-Usage
