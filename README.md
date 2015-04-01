@@ -17,13 +17,19 @@ Kids Place SDK Can be downloaded from here:  http://www.kiddoware.com/apk/kidspl
 
 SDK Javadocs can be browsed from here: http://kiddoware.com/doc/com/kiddoware/kidsplace/sdk/KPUtility.html
 
-For quick and basic implementation refer to source code of simple project and for more advanced integration refer to advanced project.
+For quick and basic implementation refer to source code of simple project: https://github.com/kiddoware/kidsplace-api-samples/tree/master/samples/simple
 
-Please click here to contact us if you have any questions. 
+and for more advanced integration refer to advanced project: https://github.com/kiddoware/kidsplace-api-samples/tree/master/samples/advanced
+
+Please open defects/enhancements requests in the issue tracker: https://github.com/kiddoware/kidsplace-api-samples/issues
+
+Please email support@kiddoware.com if you have any questions. 
+
 Some of the apps on Google Play that uses Kids Place SDK:
 
-Kids Video Player
-Letters With Ally
+Kids Video Player: https://play.google.com/store/apps/details?id=com.kiddoware.kidsvideoplayer
+Letters With Ally: https://play.google.com/store/apps/details?id=com.kiddoware.letters
+
 Basic Setup
 
 Step by step installation of the Kids Place library in an existing application project, with the simplest settings:
@@ -38,4 +44,4 @@ import com.kiddoware.kidsplace.sdk.KPUtility;
 Add following code in onCreate Method of your activity
 KPUtility.handleKPIntegration(this, KPUtility.GOOGLE_MARKET);
 For sample source code for simple integration please refer simple project code.
-For advanced integration please see Advanced Usage Guide.
+For advanced integration please see Advanced Usage Guide: https://github.com/kiddoware/kidsplace-api-samples/wiki/Advanced-Usage
