@@ -27,8 +27,8 @@ Please email support@kiddoware.com if you have any questions.
 
 Some of the apps on Google Play that uses Kids Place SDK:
 
-Kids Video Player: https://play.google.com/store/apps/details?id=com.kiddoware.kidsvideoplayer
-Letters With Ally: https://play.google.com/store/apps/details?id=com.kiddoware.letters
+   . Kids Video Player: https://play.google.com/store/apps/details?id=com.kiddoware.kidsvideoplayer
+   . Letters With Ally: https://play.google.com/store/apps/details?id=com.kiddoware.letters
 
 Basic Setup
 
