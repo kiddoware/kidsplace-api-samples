@@ -46,6 +46,7 @@ Step by step installation of the Kids Place library in an existing application p
   2. Add following code in onCreate Method of your activity
   ```
    KPUtility.handleKPIntegration(this, KPUtility.GOOGLE_MARKET);
+   ```
    For sample source code for simple integration please refer simple project code.
    For advanced integration please see Advanced Usage Guide: 
 
