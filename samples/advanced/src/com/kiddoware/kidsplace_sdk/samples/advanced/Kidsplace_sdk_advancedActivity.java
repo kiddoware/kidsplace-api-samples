@@ -103,18 +103,7 @@ public class Kidsplace_sdk_advancedActivity extends Activity {
 
 
 	}
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		Utility.logMsg("onActivityResult", TAG);
-		super.onActivityResult(requestCode, resultCode, data);
-		switch (requestCode) {
-		case REQUEST_EXIT_APP:
-			if (resultCode == RESULT_EXIT_APP) {
-				finish();
-			}
-		}
-	}
-	
+
 
 	public void btnClickHandler(View v) {
 		Button myBtn = (Button) v;
@@ -135,7 +124,7 @@ public class Kidsplace_sdk_advancedActivity extends Activity {
 	private void startSettingsActivity() {
 		// Show Settings activity
 		Intent intent = new Intent(getApplicationContext(), PrefsActivity.class);
-		startActivityForResult(intent, REQUEST_EXIT_APP);
+		startActivity(intent);
 	}
 
 	private void showStartKPMessage() {

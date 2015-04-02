@@ -24,18 +24,6 @@ public class PrefsActivity extends PreferenceActivity implements
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		addPreferencesFromResource(R.xml.preferences);				
-		Preference exitApp = (Preference) findPreference(EXIT_APP);
-		if(exitApp != null){
-		
-			exitApp.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-				public boolean onPreferenceClick(Preference preference) {
-					setResult(RESULT_EXIT_APP);					
-					finish();			
-					return true;
-				}
-			});
-
-		}	
 	}
 
 	@Override
