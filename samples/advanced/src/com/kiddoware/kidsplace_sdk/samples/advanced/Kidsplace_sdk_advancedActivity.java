@@ -15,6 +15,9 @@ import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -104,6 +107,43 @@ public class Kidsplace_sdk_advancedActivity extends Activity {
 
 	}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.menu, menu);
+		/*
+		 * menu.add(0, MENU_EXIT, 0, R.string.menu_exit)
+		 * .setIcon(R.drawable.ic_menu_exit).setAlphabeticShortcut('E');
+		 * menu.add(0, MENU_APP_PICKER, 0, R.string.menu_appPicker)
+		 * .setIcon(R.drawable.ic_menu_largetiles) .setAlphabeticShortcut('A');
+		 * menu.add(0, MENU_SETTINGS, 0, R.string.menu_settings)
+		 * .setIcon(android.R.drawable.ic_menu_preferences)
+		 * .setAlphabeticShortcut('S'); menu.add(0, MENU_HELP, 0,
+		 * R.string.menu_help)
+		 * .setIcon(android.R.drawable.ic_search_category_default)
+		 * .setAlphabeticShortcut(SearchManager.MENU_KEY); menu.add(0,
+		 * MENU_CONTACT_US, 0, R.string.menu_contactUs)
+		 * .setIcon(R.drawable.ic_menu_dialog).setAlphabeticShortcut('C');
+		 */
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// hide social share bar
+		switch (item.getItemId()) {
+		case R.id.MENU_SETTINGS:
+			if (!Utility.enforceChildLock(this)) {
+				startSettingsActivity();
+			} else {
+				showPasswordFields();
+			}
+			// showSettings();
+			return true;
+		}
+
+		return super.onOptionsItemSelected(item);
+	}
 
 	public void btnClickHandler(View v) {
 		Button myBtn = (Button) v;

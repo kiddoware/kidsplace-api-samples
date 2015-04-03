@@ -6,7 +6,7 @@
     <string name="loading_settings">Loading Settings...</string>
     
     <!-- Settings related message -->
-    <string name="firstCategoryTitle">Settings</string>
+    <string name="menu_settings">Settings</string>
     <string name="exitAppTitle">Exit App</string>
     <string name="childLockTitle">Enable Child Lock</string>
     <string name="childLockSummary">Requires Kids Place app. Locks home button and provides other locking features based on Kids Place settings.</string>
