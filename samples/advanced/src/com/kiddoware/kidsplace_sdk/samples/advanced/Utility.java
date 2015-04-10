@@ -102,7 +102,7 @@ public class Utility {
 	 * or not based on user settings. Returns true if a dialog is show to upgrade/install 
 	 * otherwise return false
 	 */
-	protected static boolean handleKPIntegration(Activity activity) {
+	protected static void handleKPIntegration(Activity activity) {
 		try{
 			//check if child lock is enabled or not in app's settings
 			if(Utility.getChildLockSetting(activity.getApplicationContext())){
@@ -113,7 +113,6 @@ public class Utility {
 		catch (Exception ex){
 			Utility.logErrorMsg("handleKPIntegration:"+ex.getMessage(), TAG);
 		}
-		return false;
 		
 	}
 	protected static boolean enforceChildLock(Activity activity){
